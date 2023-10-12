@@ -1,0 +1,47 @@
+@page "/planets"
+<h3>Types of Planets</h3>
+
+<div class="planet-card">
+    @foreach (var planet in Planets)
+    {
+        <div class="planet-box" style="background-color: @planet.Color">
+            <h4>@planet.Name</h4>
+            <p><strong>Type:</strong> @planet.Type</p>
+            <p><strong>Distance from Sun:</strong> @planet.DistanceFromSun</p>
+            <p><strong>Atmosphere:</strong> @planet.Atmosphere</p>
+            <p><strong>Temperature:</strong> @planet.Temperature</p>
+        </div>
+    }
+</div>
+
+@code {
+    private List<Planet> Planets = new List<Planet>
+    {
+        new Planet("Mercury", "Small", "Close", "Thin", "Hot", "gray"),
+        new Planet("Venus", "Medium", "Close", "Thick", "Very Hot", "yellow"),
+        new Planet("Earth", "Medium", "Moderate", "Breathable", "Varies", "blue"),
+        new Planet("Mars", "Small", "Moderate", "Thin", "Cold", "red"),
+        new Planet("Jupiter", "Large", "Far", "Thick", "Very Cold", "orange"),
+        new Planet("Saturn", "Large", "Far", "Thick", "Very Cold", "lightblue")
+    };
+
+    private class Planet
+    {
+        public string Name { get; }
+        public string Type { get; }
+        public string DistanceFromSun { get; }
+        public string Atmosphere { get; }
+        public string Temperature { get; }
+        public string Color { get; }
+
+        public Planet(string name, string type, string distance, string atmosphere, string temperature, string color)
+        {
+            Name = name;
+            Type = type;
+            DistanceFromSun = distance;
+            Atmosphere = atmosphere;
+            Temperature = temperature;
+            Color = color;
+        }
+    }
+}

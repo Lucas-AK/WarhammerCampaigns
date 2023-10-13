@@ -1,47 +1,79 @@
 @page "/planets"
-<h3>Types of Planets</h3>
+@using PlanetType
 
-<div class="planet-card">
-    @foreach (var planet in Planets)
+<div class ="page-title">
+    <h3>Planets  in your campaign</h3>
+    </div>
+
+<style>
+    .planet-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 20px;
+    }
+
+    .planet-box {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 3px solid #ccc;
+        border-radius: 15px;
+    }
+    .page-title {
+        background-color: #2300be;
+        border: 5px solid #ccc;
+        border-radius:  10px;
+        padding: 10px;
+    }
+</style>
+
+<div class="planet-cards">
+    @foreach (var planet in planets)
     {
-        <div class="planet-box" style="background-color: @planet.Color">
-            <h4>@planet.Name</h4>
-            <p><strong>Type:</strong> @planet.Type</p>
-            <p><strong>Distance from Sun:</strong> @planet.DistanceFromSun</p>
-            <p><strong>Atmosphere:</strong> @planet.Atmosphere</p>
-            <p><strong>Temperature:</strong> @planet.Temperature</p>
+        <div class="planet-box" style="background-color: @planet.PlanetViewBackgroundColor">
+            <h4>@planet.PlanetName</h4>
+            <p><strong>Type:</strong> @GetPlanetTypeName(planet.Type)</p>
+            <p><strong>Current alignment:</strong> @planet.Alignment</p>
         </div>
     }
 </div>
 
 @code {
-    private List<Planet> Planets = new List<Planet>
+    private List<Planet> planets = new List<Planet>
     {
-        new Planet("Mercury", "Small", "Close", "Thin", "Hot", "gray"),
-        new Planet("Venus", "Medium", "Close", "Thick", "Very Hot", "yellow"),
-        new Planet("Earth", "Medium", "Moderate", "Breathable", "Varies", "blue"),
-        new Planet("Mars", "Small", "Moderate", "Thin", "Cold", "red"),
-        new Planet("Jupiter", "Large", "Far", "Thick", "Very Cold", "orange"),
-        new Planet("Saturn", "Large", "Far", "Thick", "Very Cold", "lightblue")
+        new Planet("Terra", PlanetType.CivilisedWorld, "Imperial", 1000, "blue"),
+        new Planet("Hive World 418", PlanetType.HiveWorld, "Imperial", 800, "gray"),
+        new Planet("Barbarus", PlanetType.FeralWorld, "Non-Imperial", 300, "green"),
+        new Planet("Mars", PlanetType.ForgeWorld, "Imperial", 1200, "red"),
+        new Planet("Nocturne", PlanetType.FeudalWorld, "Imperial", 700, "orange"),
+        new Planet("Prospero", PlanetType.CivilisedWorld, "Imperial", 950, "purple"),
+        new Planet("Golgotha", PlanetType.DeadWorld, "Non-Imperial", 50, "black"),
+        new Planet("Valhalla", PlanetType.AgriWorld, "Imperial", 600, "white"),
+        new Planet("Magrathea", PlanetType.ResearchStation, "Non-Imperial", 200, "silver"),
+        new Planet("Tuchanka", PlanetType.FeralWorld, "Non-Imperial", 400, "brown")
     };
 
-    private class Planet
+    private string GetPlanetTypeName(PlanetType type)
     {
-        public string Name { get; }
-        public string Type { get; }
-        public string DistanceFromSun { get; }
-        public string Atmosphere { get; }
-        public string Temperature { get; }
-        public string Color { get; }
-
-        public Planet(string name, string type, string distance, string atmosphere, string temperature, string color)
+        switch (type)
         {
-            Name = name;
-            Type = type;
-            DistanceFromSun = distance;
-            Atmosphere = atmosphere;
-            Temperature = temperature;
-            Color = color;
+            case PlanetType.CivilisedWorld:
+                return "Civilised";
+            case PlanetType.AgriWorld:
+                return "Agriworld";
+            case PlanetType.DeadWorld:
+                return "Dead world";
+            case PlanetType.HiveWorld:
+                return "Hive";
+            case PlanetType.FeudalWorld:
+                return "Feudal";
+            case PlanetType.ResearchStation:
+                return "Research station";
+            case PlanetType.ForgeWorld:
+                return "Forge";
+            case PlanetType.FeralWorld:
+                return "Feral";
+            default:
+                return "UNKNOWN";
         }
     }
 }

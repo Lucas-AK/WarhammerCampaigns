@@ -1,5 +1,6 @@
 
-enum PlanetType
+namespace PlanetType{
+public enum PlanetType
 {
     AgriWorld,
     CivilisedWorld,
@@ -13,17 +14,23 @@ enum PlanetType
 
 public class Planet
 {
-    public string PlanetName { get;}
-    public bool UnderImperialControl {get;}
+    public string PlanetName { get; set;}
+    public string Alignment {get; set;}
+    public bool UnderImperialControl {get; set;}
 
-    public Planet(string name, string type, string distance, string atmosphere, string temperature, string color)
+    public string PlanetViewBackgroundColor {get; set;}
+
+    public PlanetType Type {get; set;}
+    public int RequisitionPoints {get; set;}
+
+    public Planet(string name, PlanetType type, string alignment, int requsitionPoints, string backgroundColor)
     {
-        Name = name;
+        PlanetName = name;
         Type = type;
-        DistanceFromSun = distance;
-        Atmosphere = atmosphere;
-        Temperature = temperature;
-        Color = color;
+        Alignment = alignment;
+        RequisitionPoints = requsitionPoints; 
+        PlanetViewBackgroundColor = backgroundColor;
     }
 
+}
 }

@@ -1,9 +1,8 @@
-@page "/planets"
 @using PlanetType
 
-<div class ="page-title">
-    <h3>Planets  in your campaign</h3>
-    </div>
+@page "/planets"
+
+<PageTitle>Planet</PageTitle>
 
 <style>
     .planet-cards {
@@ -20,11 +19,15 @@
     }
     .page-title {
         background-color: #2300be;
-        border: 5px solid #ccc;
-        border-radius:  10px;
+        border-width: 3px;
+        border-style: solid;
         padding: 10px;
     }
 </style>
+
+<div class ="page-title">
+    <h3>Planets  in your campaign</h3>
+    </div>
 
 <div class="planet-cards">
     @foreach (var planet in planets)

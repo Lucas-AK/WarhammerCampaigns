@@ -1,4 +1,3 @@
-
 namespace PlanetType{
 public enum PlanetType
 {

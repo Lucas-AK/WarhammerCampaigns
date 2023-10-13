@@ -1,10 +1,10 @@
+@using Factions
+
 @page "/factions"
+
 
 <PageTitle>Factions</PageTitle>
 
-<div class ="page-title">
-    <h3>Choose your faction</h3>
-</div>
 
 <style>
     .faction-cards
@@ -23,5 +23,48 @@
     }
     
 </style>
+
+<div class ="page-title">
+    <h3>Choose your faction</h3>
+</div>
+
+<div class="faction-box">
+    @foreach (var faction in factions)
+    {
+        <div class="faction-box">
+            <h4>@faction.FactionName</h4>
+            <p><strong>Name:</strong>@GetFactionTypeName(faction.Type)</p>
+            <p><strong>@faction.description</strong></p>
+        </div>
+    }
+</div>
+
 @code
-{}
+{
+
+    private List<Faction> factions = new List<Faction>
+{
+    new Faction("Space Marines", FactionType.Imperium, "Superhuman soldiers of the Imperium."),
+    new Faction("Chaos Space Marines", FactionType.Chaos, "Corrupted and chaotic versions of the Space Marines."),
+    new Faction("Imperial Guard (Astra Militarum)", FactionType.Imperium, "The vast human armies of the Imperium."),
+    new Faction("Adeptus Mechanicus", FactionType.Imperium, "Tech-priests and machines of the Imperium."),
+    new Faction("Adeptus Custodes", FactionType.Imperium, "Emperor's elite bodyguards."),
+    new Faction("Sisters of Battle (Adepta Sororitas)", FactionType.Imperium, "Warrior nuns of the Emperor."),
+    new Faction("Eldar (Craftworlds)", FactionType.Xenos, "Elegant and ancient alien race."),
+    new Faction("Dark Eldar (Drukhari)", FactionType.Xenos, "Sadistic and raiding aliens."),
+    new Faction("Harlequins", FactionType.Xenos, "Eldar performers and warriors."),
+    new Faction("Orks", FactionType.Xenos, "Greenskinned, war-loving brutes."),
+    new Faction("T'au Empire", FactionType.Xenos, "Advanced technology and philosophy aliens."),
+    new Faction("Necrons", FactionType.Xenos, "Ancient, robotic undead."),
+    new Faction("Tyranids", FactionType.Xenos, "Swarm-like, bio-organic aliens."),
+    new Faction("Genestealer Cults", FactionType.Chaos, "Secret cults serving the Tyranids."),
+    new Faction("Imperial Knights", FactionType.Imperium, "Massive war machines."),
+    new Faction("Death Guard", FactionType.Chaos, "Nurgle-worshipping Chaos Space Marines."),
+    new Faction("Thousand Sons", FactionType.Chaos, "Tzeentch-worshipping Chaos Space Marines."),
+    new Faction("Custodian Guard", FactionType.Imperium, "Emperor's golden guardians."),
+    new Faction("Sisters of Silence", FactionType.Imperium, "Psychic-nullifying warriors."),
+    new Faction("Chaos Daemons", FactionType.Chaos, "Entities from the Warp."),
+    new Faction("Ynnari", FactionType.Xenos, "Eldar following Ynnead, the god of the dead.")
+};
+
+}

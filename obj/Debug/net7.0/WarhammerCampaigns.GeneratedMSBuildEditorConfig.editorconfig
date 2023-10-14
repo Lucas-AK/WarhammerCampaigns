@@ -28,10 +28,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmFjdGlvbnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lucas/CodeProjects/WarhammerCampaigns/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [/home/lucas/CodeProjects/WarhammerCampaigns/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -55,10 +51,6 @@ build_metadata.AdditionalFiles.CssScope = b-uhjqj25i5c
 [/home/lucas/CodeProjects/WarhammerCampaigns/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-jhanyjy8jg
-
-[/home/lucas/CodeProjects/WarhammerCampaigns/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
 
 [/home/lucas/CodeProjects/WarhammerCampaigns/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s

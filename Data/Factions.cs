@@ -1,4 +1,4 @@
-namespace Factions
+namespace WarhammerCampaigns.Data.Factions
 {
     public enum FactionType
     {

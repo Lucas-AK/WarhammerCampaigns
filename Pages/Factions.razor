@@ -1,51 +1,49 @@
-@using WarhammerCampaigns.Data.Factions
-
 @page "/factions"
-
+@using WarhammerCampaigns.Data.Factions
 
 <PageTitle>Factions</PageTitle>
 
-
 <style>
-    .faction-cards
-    {
+    .faction-cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit{500px, 5fr});
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Corrected grid-template-columns property */
+        gap: 20px; /* Added gap for spacing between .mainFaction-box elements */
     }
-    .mainFaction-box
-    {
+
+    .mainFaction-box {
         padding: 20px;
         border: 3px solid #ccc;
         border-radius: 15px;
+        transition: transform 0.2s, box-shadow 0.2s;
     }
-    .faction-box
-    {
 
+    .mainFaction-box:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
-    .page-title
-    {
-        
+
+    .page-title {
+        text-align: center; /* Center the page title text */
     }
-    
+
+
 </style>
 
-<div class ="page-title">
+<div class="page-title">
     <h3>Choose your faction</h3>
 </div>
 
-<div class="mainFaction-box">
+<div class="faction-cards">
     @foreach (var mainfaction in mainFactions)
     {
         <div class="mainFaction-box">
-            <h4>@mainfaction.FactionName</h4>
-            <p><strong>@mainfaction.Description</strong></p>
+                <h4 style="text-align: center">@mainfaction.FactionName</h4>
+                <p><strong>@mainfaction.Description</strong></p>            
         </div>
     }
 </div>
 
-<div class="faction-box">
-
-</div>
+<div class="faction-box"></div>
 
 @code
 {

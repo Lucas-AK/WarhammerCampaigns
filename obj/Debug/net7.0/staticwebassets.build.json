@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9MLCeqnpsVnQXBHAcYcSH6VxIZ+SdFxm18+66icr9lM=",
+  "Hash": "ZomBkSfAagE3xkpj6/0bIfI6Vu5pMFpZfExyZNgJsx0=",
   "Source": "WarhammerCampaigns",
   "BasePath": "_content/WarhammerCampaigns",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "WarhammerCampaigns/wwwroot",
+      "Name": "WarhammerCampaigns\\wwwroot",
       "Source": "WarhammerCampaigns",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/obj/Debug/net7.0/scopedcss/bundle/WarhammerCampaigns.styles.css",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\obj\\Debug\\net7.0\\scopedcss\\bundle\\WarhammerCampaigns.styles.css",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Computed",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/obj/Debug/net7.0/scopedcss/bundle/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "WarhammerCampaigns.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/lucas/CodeProjects/WarhammerCampaigns/obj/Debug/net7.0/scopedcss/bundle/WarhammerCampaigns.styles.css"
+      "OriginalItemSpec": "C:\\Users\\yakuz\\WarhammerCampaigns\\obj\\Debug\\net7.0\\scopedcss\\bundle\\WarhammerCampaigns.styles.css"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/obj/Debug/net7.0/scopedcss/projectbundle/WarhammerCampaigns.bundle.scp.css",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WarhammerCampaigns.bundle.scp.css",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Computed",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/obj/Debug/net7.0/scopedcss/projectbundle/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "WarhammerCampaigns.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/lucas/CodeProjects/WarhammerCampaigns/obj/Debug/net7.0/scopedcss/projectbundle/WarhammerCampaigns.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\yakuz\\WarhammerCampaigns\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WarhammerCampaigns.bundle.scp.css"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/bootstrap/bootstrap.min.css",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/FONT-LICENSE"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.eot"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.otf"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.svg"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.ttf"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.woff"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/ICON-LICENSE"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/README.md",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/README.md"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/site.css",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\site.css",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/site.css"
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/favicon.png",
+      "Identity": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\favicon.png",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "ContentRoot": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\",
       "BasePath": "_content/WarhammerCampaigns",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -269,7 +269,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.png"
+      "OriginalItemSpec": "wwwroot\\favicon.png"
     }
   ]
 }

@@ -1,75 +1,75 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WarhammerCampaigns.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WarhammerCampaigns.bundle.scp.css"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/obj/Debug/net7.0/scopedcss/projectbundle/WarhammerCampaigns.bundle.scp.css",
+      "PackagePath": "staticwebassets/WarhammerCampaigns.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "PackagePath": "staticwebassets\\css\\open-iconic"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/FONT-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
-      "PackagePath": "staticwebassets\\css\\open-iconic"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/ICON-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\README.md",
-      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/README.md",
+      "PackagePath": "staticwebassets/css/open-iconic/README.md"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
-      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
-      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
-      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
-      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
-      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
-      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "C:\\Users\\yakuz\\WarhammerCampaigns\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WarhammerCampaigns.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.WarhammerCampaigns.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.WarhammerCampaigns.props",
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.WarhammerCampaigns.props",
       "PackagePath": "build\\WarhammerCampaigns.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.WarhammerCampaigns.props",
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.WarhammerCampaigns.props",
       "PackagePath": "buildMultiTargeting\\WarhammerCampaigns.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.WarhammerCampaigns.props",
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.WarhammerCampaigns.props",
       "PackagePath": "buildTransitive\\WarhammerCampaigns.props"
     }
   ],

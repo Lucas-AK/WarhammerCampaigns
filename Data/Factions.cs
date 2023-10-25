@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.SignalR;
-
 namespace WarhammerCampaigns.Data.Factions
 {
     public enum FactionType
@@ -15,14 +13,11 @@ namespace WarhammerCampaigns.Data.Factions
         public string Description { get; set; }
         public FactionType Type { get; set; }
 
-        public string Image {get; set;}
-
-        public Faction(string name, FactionType type, string description, string image)
+        public Faction(string name, FactionType type, string description)
         {
             FactionName = name;
             Description = description;
             Type = type;
-            Image = image;
         }
     }
 }

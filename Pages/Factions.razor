@@ -4,22 +4,34 @@
 <PageTitle>Factions</PageTitle>
 
 <style>
+     
+
+    .page-wrapper 
+    {
+        padding:1rem;
+        height: 100%;
+    }
+
     .faction-cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Corrected grid-template-columns property */
-        gap: 20px; /* Added gap for spacing between .mainFaction-box elements */
+        grid-template-columns: repeat(auto-fit, minmax(500px, 5fr)); /* Corrected grid-template-columns property */
+        height: 98vh;
+        gap: 2rem
     }
 
     .mainFaction-box {
-        padding: 20px;
-        border: 3px solid #ccc;
-        border-radius: 15px;
-        transition: transform 0.2s, box-shadow 0.2s;
+        padding: 3rem;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-color: black;
+        color: white;
     }
 
-    .mainFaction-box:hover {
-        transform: scale(1.01);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    .main
+    
+    .mainFaction-box:hover{
+        
     }
 
     .page-title {
@@ -36,12 +48,13 @@
 <div class="faction-cards">
     @foreach (var mainfaction in mainFactions)
     {
-        <div class="mainFaction-box">
-                <h4 style="text-align: center">@mainfaction.FactionName</h4>
-                <p><strong>@mainfaction.Description</strong></p>            
+        <div class="mainFaction-box" style="background-image: url('@mainfaction.Image')">
+            <h4 style="text-align: center">@mainfaction.FactionName</h4>
+            <p><strong>@mainfaction.Description</strong></p>            
         </div>
     }
 </div>
+
 
 <div class="faction-box"></div>
 
@@ -49,36 +62,36 @@
 {
     private List<Faction> mainFactions = new List<Faction>
     {
-    new Faction("The Empire of Man", FactionType.Imperial, "The Empire of Man, also known as the Imperium, is a vast and sprawling human civilization in a grimdark future. It is characterized by its rigid hierarchy, the worship of the God-Emperor, and the relentless pursuit of survival against myriad threats. The Imperium comprises countless worlds, each with its own unique challenges and contributions to the greater whole. The backbone of the Imperium's military might consists of the Imperial Guard, bolstered by superhuman Space Marines, towering Imperial Knights, and various other orders and organizations. The Imperium's history is one of unending conflict and sacrifice as it strives to maintain its dominance in a hostile galaxy."),
+    new Faction("The Empire of Man", FactionType.Imperial, "The Empire of Man, also known as the Imperium, is a vast and sprawling human civilization in a grimdark future. It is characterized by its rigid hierarchy, the worship of the God-Emperor, and the relentless pursuit of survival against myriad threats. The Imperium comprises countless worlds, each with its own unique challenges and contributions to the greater whole. The backbone of the Imperium's military might consists of the Imperial Guard, bolstered by superhuman Space Marines, towering Imperial Knights, and various other orders and organizations. The Imperium's history is one of unending conflict and sacrifice as it strives to maintain its dominance in a hostile galaxy.",""),
 
-    new Faction("Chaos Legions", FactionType.Chaos, "The Chaos Legions represent the dark, corrupt, and heretical forces that have turned against the Imperium and the forces of order. Comprising traitor Space Marines, daemonic entities, and malevolent warbands, the Chaos Legions worship the Chaos Gods, entities of extreme power and malevolence. These chaotic forces are motivated by a desire for power, revenge, and the spreading of chaos and corruption throughout the galaxy. Each Chaos Legion serves a specific Chaos God, such as Khorne, Nurgle, Tzeentch, or Slaanesh, and they are known for their brutal warfare and their desire to tear down the Imperium."),
+    new Faction("Chaos Legions", FactionType.Chaos, "The Chaos Legions represent the dark, corrupt, and heretical forces that have turned against the Imperium and the forces of order. Comprising traitor Space Marines, daemonic entities, and malevolent warbands, the Chaos Legions worship the Chaos Gods, entities of extreme power and malevolence. These chaotic forces are motivated by a desire for power, revenge, and the spreading of chaos and corruption throughout the galaxy. Each Chaos Legion serves a specific Chaos God, such as Khorne, Nurgle, Tzeentch, or Slaanesh, and they are known for their brutal warfare and their desire to tear down the Imperium.",""),
 
-    new Faction("Xenos", FactionType.Xeno, "The Xenos faction encompasses a diverse array of alien species, each with its own unique characteristics and motivations. These species exist outside the realms of humanity and often have vastly different customs, technologies, and agendas")
+    new Faction("Xenos", FactionType.Xeno, "The Xenos faction encompasses a diverse array of alien species, each with its own unique characteristics and motivations. These species exist outside the realms of humanity and often have vastly different customs, technologies, and agendas", "images/faction_tau_empire.jpg")
     };
 
-    private List<Faction> factions = new List<Faction>
-{
-    new Faction("Space Marines", FactionType.Imperial, "Superhuman soldiers of the Imperial."),
-    new Faction("Chaos Space Marines", FactionType.Chaos, "Corrupted and chaotic versions of the Space Marines."),
-    new Faction("Imperial Guard (Astra Militarum)", FactionType.Imperial, "The vast human armies of the Imperial."),
-    new Faction("Adeptus Mechanicus", FactionType.Imperial, "Tech-priests and machines of the Imperial."),
-    new Faction("Adeptus Custodes", FactionType.Imperial, "Emperor's elite bodyguards."),
-    new Faction("Sisters of Battle (Adepta Sororitas)", FactionType.Imperial, "Warrior nuns of the Emperor."),
-    new Faction("Eldar (Craftworlds)", FactionType.Xeno, "Elegant and ancient alien race."),
-    new Faction("Dark Eldar (Drukhari)", FactionType.Xeno, "Sadistic and raiding aliens."),
-    new Faction("Harlequins", FactionType.Xeno, "Eldar performers and warriors."),
-    new Faction("Orks", FactionType.Xeno, "Greenskinned, war-loving brutes."),
-    new Faction("T'au Empire", FactionType.Xeno, "Advanced technology and philosophy aliens."),
-    new Faction("Necrons", FactionType.Xeno, "Ancient, robotic undead."),
-    new Faction("Tyranids", FactionType.Xeno, "Swarm-like, bio-organic aliens."),
-    new Faction("Genestealer Cults", FactionType.Chaos, "Secret cults serving the Tyranids."),
-    new Faction("Imperial Knights", FactionType.Imperial, "Massive war machines."),
-    new Faction("Death Guard", FactionType.Chaos, "Nurgle-worshipping Chaos Space Marines."),
-    new Faction("Thousand Sons", FactionType.Chaos, "Tzeentch-worshipping Chaos Space Marines."),
-    new Faction("Custodian Guard", FactionType.Imperial, "Emperor's golden guardians."),
-    new Faction("Sisters of Silence", FactionType.Imperial, "Psychic-nullifying warriors."),
-    new Faction("Chaos Daemons", FactionType.Chaos, "Entities from the Warp."),
-    new Faction("Ynnari", FactionType.Xeno, "Eldar following Ynnead, the god of the dead.")
+    private List<Faction> factions = new List<Faction>{
+    new Faction("Space Marines", FactionType.Imperial, "Superhuman soldiers of the Imperial.", ""),
+    new Faction("Chaos Space Marines", FactionType.Chaos, "Corrupted and chaotic versions of the Space Marines.", ""),
+    new Faction("Imperial Guard (Astra Militarum)", FactionType.Imperial, "The vast human armies of the Imperial.", ""),
+    new Faction("Adeptus Mechanicus", FactionType.Imperial, "Tech-priests and machines of the Imperial.", ""),
+    new Faction("Adeptus Custodes", FactionType.Imperial, "Emperor's elite bodyguards.", ""),
+    new Faction("Sisters of Battle (Adepta Sororitas)", FactionType.Imperial, "Warrior nuns of the Emperor.", ""),
+    new Faction("Eldar (Craftworlds)", FactionType.Xeno, "Elegant and ancient alien race.", ""),
+    new Faction("Dark Eldar (Drukhari)", FactionType.Xeno, "Sadistic and raiding aliens.", ""),
+    new Faction("Harlequins", FactionType.Xeno, "Eldar performers and warriors.", ""),
+    new Faction("Orks", FactionType.Xeno, "Greenskinned, war-loving brutes.", ""),
+    new Faction("T'au Empire", FactionType.Xeno, "Advanced technology and philosophy aliens.", ""),
+    new Faction("Necrons", FactionType.Xeno, "Ancient, robotic undead.", ""),
+    new Faction("Tyranids", FactionType.Xeno, "Swarm-like, bio-organic aliens.", ""),
+    new Faction("Genestealer Cults", FactionType.Chaos, "Secret cults serving the Tyranids.", ""),
+    new Faction("Imperial Knights", FactionType.Imperial, "Massive war machines.", ""),
+    new Faction("Death Guard", FactionType.Chaos, "Nurgle-worshipping Chaos Space Marines.", ""),
+    new Faction("Thousand Sons", FactionType.Chaos, "Tzeentch-worshipping Chaos Space Marines.", ""),
+    new Faction("Custodian Guard", FactionType.Imperial, "Emperor's golden guardians.", ""),
+    new Faction("Sisters of Silence", FactionType.Imperial, "Psychic-nullifying warriors.", ""),
+    new Faction("Chaos Daemons", FactionType.Chaos, "Entities from the Warp.", ""),
+    new Faction("Ynnari", FactionType.Xeno, "Eldar following Ynnead, the god of the dead.", "")};
+
 };
 
 }

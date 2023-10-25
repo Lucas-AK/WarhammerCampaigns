@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/faction_tau_empire.jpg",
+      "PackagePath": "staticwebassets/images/faction_tau_empire.jpg"
+    },
+    {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.WarhammerCampaigns.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

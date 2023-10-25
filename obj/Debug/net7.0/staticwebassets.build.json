@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9MLCeqnpsVnQXBHAcYcSH6VxIZ+SdFxm18+66icr9lM=",
+  "Hash": "OE+locHhvmcpN9HvfMJatCX1tlmDkiXnvLrSmCEA+UE=",
   "Source": "WarhammerCampaigns",
   "BasePath": "_content/WarhammerCampaigns",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.png"
+    },
+    {
+      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/faction_tau_empire.jpg",
+      "SourceId": "WarhammerCampaigns",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "BasePath": "_content/WarhammerCampaigns",
+      "RelativePath": "images/faction_tau_empire.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/faction_tau_empire.jpg"
     }
   ]
 }

@@ -15,30 +15,60 @@
     .faction-cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(500px, 5fr)); /* Corrected grid-template-columns property */
-        height: 98vh;
-        gap: 2rem
+        height: 85vh;
+        gap: 2rem;
     }
 
     .mainFaction-box {
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
         padding: 3rem;
         height: 100%;
         width: 100%;
         background-size: cover;
         background-color: black;
         color: white;
+        cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+        position: relative;
+        transition: background-size 0.3;
+        transform: translateX(-100%);
+        animation: slideInLeft 1s ease forwards;
     }
 
-    .main
-    
-    .mainFaction-box:hover{
-        
+    .faction-grid
+    {
+        display: none;
     }
 
+    .mainFaction-box:hover
+    {   
+        transform: ;
+    }
+    .overlay
+    {
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    h4.faction-name
+    {
+        text-align: center;
+        font-size: 3rem;
+        z-index: 1;
+    }
     .page-title {
         text-align: center; /* Center the page title text */
     }
 
-
+    @@keyframes slideInLeft {
+        to {
+            transform: translateX(0); /* End at their normal position */
+        }
+    }
 </style>
 
 <div class="page-title">
@@ -48,12 +78,23 @@
 <div class="faction-cards">
     @foreach (var mainfaction in mainFactions)
     {
-        <div class="mainFaction-box" style="background-image: url('@mainfaction.Image')">
-            <h4 style="text-align: center">@mainfaction.FactionName</h4>
-            <p><strong>@mainfaction.Description</strong></p>            
+        <div class="mainFaction-box" style="background-image: url('@mainfaction.Image')" @onclick="() => ToggleFactionGrid(mainfaction.Type)">
+            <h4 class="faction-name">@mainfaction.FactionName</h4>
+            <div class="overlay"></div>
+        </div>
+
+        <div class="faction-grid @(mainfaction.Type)" style="display: none;">
+            @foreach (var faction in factions.Where(f => f.Type == mainfaction.Type))
+            {
+                <div class="faction-item">
+                    @faction.FactionName
+                </div>
+            }
         </div>
     }
 </div>
+
+
 
 
 <div class="faction-box"></div>
@@ -62,7 +103,7 @@
 {
     private List<Faction> mainFactions = new List<Faction>
     {
-    new Faction("The Empire of Man", FactionType.Imperial, "The Empire of Man, also known as the Imperium, is a vast and sprawling human civilization in a grimdark future. It is characterized by its rigid hierarchy, the worship of the God-Emperor, and the relentless pursuit of survival against myriad threats. The Imperium comprises countless worlds, each with its own unique challenges and contributions to the greater whole. The backbone of the Imperium's military might consists of the Imperial Guard, bolstered by superhuman Space Marines, towering Imperial Knights, and various other orders and organizations. The Imperium's history is one of unending conflict and sacrifice as it strives to maintain its dominance in a hostile galaxy.",""),
+    new Faction("The Imperium", FactionType.Imperial, "The Imperium is a vast and sprawling human civilization in a grimdark future. It is characterized by its rigid hierarchy, the worship of the God-Emperor, and the relentless pursuit of survival against myriad threats. The Imperium comprises countless worlds, each with its own unique challenges and contributions to the greater whole. The backbone of the Imperium's military might consists of the Imperial Guard, bolstered by superhuman Space Marines, towering Imperial Knights, and various other orders and organizations. The Imperium's history is one of unending conflict and sacrifice as it strives to maintain its dominance in a hostile galaxy.",""),
 
     new Faction("Chaos Legions", FactionType.Chaos, "The Chaos Legions represent the dark, corrupt, and heretical forces that have turned against the Imperium and the forces of order. Comprising traitor Space Marines, daemonic entities, and malevolent warbands, the Chaos Legions worship the Chaos Gods, entities of extreme power and malevolence. These chaotic forces are motivated by a desire for power, revenge, and the spreading of chaos and corruption throughout the galaxy. Each Chaos Legion serves a specific Chaos God, such as Khorne, Nurgle, Tzeentch, or Slaanesh, and they are known for their brutal warfare and their desire to tear down the Imperium.",""),
 
@@ -92,6 +133,18 @@
     new Faction("Chaos Daemons", FactionType.Chaos, "Entities from the Warp.", ""),
     new Faction("Ynnari", FactionType.Xeno, "Eldar following Ynnead, the god of the dead.", "")};
 
-};
+    private FactionType? selectedFactionType;
+
+    private void ToggleFactionGrid(FactionType factionType)
+    {
+        if (selectedFactionType == factionType)
+        {
+            selectedFactionType = null; // Hide the grid if it's already visible
+        }
+        else
+        {
+            selectedFactionType = factionType; // Show the grid for the selected faction
+        }
+    }
 
 }

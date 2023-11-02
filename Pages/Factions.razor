@@ -4,71 +4,73 @@
 <PageTitle>Factions</PageTitle>
 
 <style>
-     
-
-    .page-wrapper 
-    {
-        padding:1rem;
+    .page-wrapper {
+        padding: 1rem;
         height: 100%;
     }
 
     .faction-cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 5fr)); /* Corrected grid-template-columns property */
+        grid-template-columns: repeat(auto-fit, minmax(500px, 5fr));
         height: 85vh;
         gap: 2rem;
     }
 
     .mainFaction-box {
-        display: flex; /* Use flexbox for centering */
-        flex-direction: column; /* Stack children vertically */
-        justify-content: center; /* Center vertically */
-        align-items: center; /* Center horizontally */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 3rem;
-        height: 100%;
+        height: 100%; /* Start with a height of 0 */
         width: 100%;
         background-size: cover;
         background-color: black;
         color: white;
-        cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+        cursor: pointer;
         position: relative;
-        transition: background-size 0.3;
-        transform: translateX(-100%);
-        animation: slideInLeft 1s ease forwards;
-    }
-
-    .faction-grid
-    {
-        display: none;
+        transition: transform 500ms;
     }
 
     .mainFaction-box:hover
-    {   
-        transform: ;
-    }
-    .overlay
     {
+        transform: translateY(10px);
+    }
+
+    .xeno-faction-cards, .imperial-faction-cards, .chaos-faction-cards {
+        display: none; /* Initially hide sub-faction containers */
+    }
+
+    .subFaction-box {
+        transform: translateY(100%); /* Start with the sub-faction boxes below the view */
+        transition: transform 500ms, opacity 500ms;
+        opacity: 0; /* Start with opacity 0 */
+    }
+
+    .overlay {
         background-color: black;
         opacity: 0.5;
         position: absolute;
         width: 100%;
         height: 100%;
+        transform: 1s;
     }
-    h4.faction-name
+
+    .overlay:hover
     {
+        background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 70%);
+    }
+    h4.faction-name {
         text-align: center;
         font-size: 3rem;
         z-index: 1;
     }
+
     .page-title {
-        text-align: center; /* Center the page title text */
+        text-align: center;
     }
 
-    @@keyframes slideInLeft {
-        to {
-            transform: translateX(0); /* End at their normal position */
-        }
-    }
+
 </style>
 
 <div class="page-title">
@@ -78,37 +80,64 @@
 <div class="faction-cards">
     @foreach (var mainfaction in mainFactions)
     {
-        <div class="mainFaction-box" style="background-image: url('@mainfaction.Image')" @onclick="() => ToggleFactionGrid(mainfaction.Type)">
-            <h4 class="faction-name">@mainfaction.FactionName</h4>
-            <div class="overlay"></div>
-        </div>
+        <a @onclick="() => factionChanger(mainfaction)">
+            <div class="mainFaction-box" style="background-image: url('@mainfaction.Image')">
+                <h4 class="faction-name">@mainfaction.FactionName</h4>
+                <div class="overlay"></div>
+            </div>
+        </a>
+    }
+</div>
+<div class="xeno-faction-cards">
+    @foreach (var faction in factions)
+    {
+        if (faction.Type == FactionType.Xeno)
+        {
+            <div class="subFaction-box" style="background-image: url('@faction.Image')">
+                <h4 class="faction-name">@faction.FactionName</h4>
+                <div class="overlay"></div>
+            </div>
+        }
+    }
+</div>
 
-        <div class="faction-grid @(mainfaction.Type)" style="display: none;">
-            @foreach (var faction in factions.Where(f => f.Type == mainfaction.Type))
-            {
-                <div class="faction-item">
-                    @faction.FactionName
-                </div>
-            }
-        </div>
+<div class="imperial-faction-cards">
+    @foreach (var faction in factions)
+    {
+        if (faction.Type == FactionType.Imperial)
+        {
+            <div class="subFaction-box" style="background-image: url('@faction.Image')">
+                <h4 class="faction-name">@faction.FactionName</h4>
+                <div class="overlay"></div>
+            </div>
+        }
+    }
+</div>
+
+<div class="chaos-faction-cards">
+    @foreach (var faction in factions)
+    {
+        if (faction.Type == FactionType.Chaos)
+        {
+            <div class="subFaction-box" style="background-image: url('@faction.Image')">
+                <h4 class="faction-name">@faction.FactionName</h4>
+                <div class="overlay"></div>
+            </div>
+        }
     }
 </div>
 
 
-
-
-<div class="faction-box"></div>
-
 @code
 {
     private List<Faction> mainFactions = new List<Faction>
-    {
-    new Faction("The Imperium", FactionType.Imperial, "The Imperium is a vast and sprawling human civilization in a grimdark future. It is characterized by its rigid hierarchy, the worship of the God-Emperor, and the relentless pursuit of survival against myriad threats. The Imperium comprises countless worlds, each with its own unique challenges and contributions to the greater whole. The backbone of the Imperium's military might consists of the Imperial Guard, bolstered by superhuman Space Marines, towering Imperial Knights, and various other orders and organizations. The Imperium's history is one of unending conflict and sacrifice as it strives to maintain its dominance in a hostile galaxy.",""),
+{
+    new Faction("The Imperium", FactionType.Imperial, "The Imperium is a vast and sprawling human civilization in a grimdark future. It is characterized by its rigid hierarchy, the worship of the God-Emperor, and the relentless pursuit of survival against myriad threats. The Imperium comprises countless worlds, each with its own unique challenges and contributions to the greater whole. The backbone of the Imperium's military might consists of the Imperial Guard, bolstered by superhuman Space Marines, towering Imperial Knights, and various other orders and organizations. The Imperium's history is one of unending conflict and sacrifice as it strives to maintain its dominance in a hostile galaxy.", "images/the-imperium.jpg"),
 
-    new Faction("Chaos Legions", FactionType.Chaos, "The Chaos Legions represent the dark, corrupt, and heretical forces that have turned against the Imperium and the forces of order. Comprising traitor Space Marines, daemonic entities, and malevolent warbands, the Chaos Legions worship the Chaos Gods, entities of extreme power and malevolence. These chaotic forces are motivated by a desire for power, revenge, and the spreading of chaos and corruption throughout the galaxy. Each Chaos Legion serves a specific Chaos God, such as Khorne, Nurgle, Tzeentch, or Slaanesh, and they are known for their brutal warfare and their desire to tear down the Imperium.",""),
+    new Faction("Chaos Legions", FactionType.Chaos, "The Chaos Legions represent the dark, corrupt, and heretical forces that have turned against the Imperium and the forces of order. Comprising traitor Space Marines, daemonic entities, and malevolent warbands, the Chaos Legions worship the Chaos Gods, entities of extreme power and malevolence. These chaotic forces are motivated by a desire for power, revenge, and the spreading of chaos and corruption throughout the galaxy. Each Chaos Legion serves a specific Chaos God, such as Khorne, Nurgle, Tzeentch, or Slaanesh, and they are known for their brutal warfare and their desire to tear down the Imperium.", "images/chaos-legions.jpg"),
 
     new Faction("Xenos", FactionType.Xeno, "The Xenos faction encompasses a diverse array of alien species, each with its own unique characteristics and motivations. These species exist outside the realms of humanity and often have vastly different customs, technologies, and agendas", "images/faction_tau_empire.jpg")
-    };
+};
 
     private List<Faction> factions = new List<Faction>{
     new Faction("Space Marines", FactionType.Imperial, "Superhuman soldiers of the Imperial.", ""),
@@ -123,28 +152,30 @@
     new Faction("Orks", FactionType.Xeno, "Greenskinned, war-loving brutes.", ""),
     new Faction("T'au Empire", FactionType.Xeno, "Advanced technology and philosophy aliens.", ""),
     new Faction("Necrons", FactionType.Xeno, "Ancient, robotic undead.", ""),
-    new Faction("Tyranids", FactionType.Xeno, "Swarm-like, bio-organic aliens.", ""),
-    new Faction("Genestealer Cults", FactionType.Chaos, "Secret cults serving the Tyranids.", ""),
-    new Faction("Imperial Knights", FactionType.Imperial, "Massive war machines.", ""),
-    new Faction("Death Guard", FactionType.Chaos, "Nurgle-worshipping Chaos Space Marines.", ""),
-    new Faction("Thousand Sons", FactionType.Chaos, "Tzeentch-worshipping Chaos Space Marines.", ""),
-    new Faction("Custodian Guard", FactionType.Imperial, "Emperor's golden guardians.", ""),
-    new Faction("Sisters of Silence", FactionType.Imperial, "Psychic-nullifying warriors.", ""),
-    new Faction("Chaos Daemons", FactionType.Chaos, "Entities from the Warp.", ""),
-    new Faction("Ynnari", FactionType.Xeno, "Eldar following Ynnead, the god of the dead.", "")};
+    new Faction("Tyranids", FactionType.Xeno, "Swarm-like, bio-organic aliens.", "")
+};
 
-    private FactionType? selectedFactionType;
-
-    private void ToggleFactionGrid(FactionType factionType)
+void factionChanger(Faction mainfaction)
+{
+    switch (mainfaction.Type)
     {
-        if (selectedFactionType == factionType)
-        {
-            selectedFactionType = null; // Hide the grid if it's already visible
-        }
-        else
-        {
-            selectedFactionType = factionType; // Show the grid for the selected faction
-        }
+        case FactionType.Imperial:
+            // Perform actions for Imperial faction
+            // For example, you can navigate to a specific page or show faction details.
+            break;
+        case FactionType.Chaos:
+            // Perform actions for Chaos faction
+            break;
+        case FactionType.Xeno:
+            // Perform actions for Xenos faction
+            break;
+        // Add more cases for other faction types as needed
+        default:
+            // Handle cases not covered by specific factions
+            break;
     }
+}
 
+
+    
 }

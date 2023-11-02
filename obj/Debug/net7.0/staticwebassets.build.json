@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OE+locHhvmcpN9HvfMJatCX1tlmDkiXnvLrSmCEA+UE=",
+  "Hash": "Qz99l0Z6SqQcnypTjnnr34m9S3zCyd5vLEoClP3HVVk=",
   "Source": "WarhammerCampaigns",
   "BasePath": "_content/WarhammerCampaigns",
   "Mode": "Default",
@@ -272,6 +272,23 @@
       "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
+      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/chaos-legions.jpg",
+      "SourceId": "WarhammerCampaigns",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "BasePath": "_content/WarhammerCampaigns",
+      "RelativePath": "images/chaos-legions.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/chaos-legions.jpg"
+    },
+    {
       "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/faction_tau_empire.jpg",
       "SourceId": "WarhammerCampaigns",
       "SourceType": "Discovered",
@@ -287,6 +304,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/faction_tau_empire.jpg"
+    },
+    {
+      "Identity": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/the-imperium.jpg",
+      "SourceId": "WarhammerCampaigns",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/",
+      "BasePath": "_content/WarhammerCampaigns",
+      "RelativePath": "images/the-imperium.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/the-imperium.jpg"
     }
   ]
 }

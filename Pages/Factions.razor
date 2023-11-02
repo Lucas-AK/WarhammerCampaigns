@@ -88,42 +88,33 @@
         </a>
     }
 </div>
-<div class="xeno-faction-cards">
+<div class="xeno-faction-cards" style="display: @(selectedMainFaction == FactionType.Xeno ? "block" : "none")">
     @foreach (var faction in factions)
     {
-        if (faction.Type == FactionType.Xeno)
-        {
-            <div class="subFaction-box" style="background-image: url('@faction.Image')">
-                <h4 class="faction-name">@faction.FactionName</h4>
-                <div class="overlay"></div>
-            </div>
-        }
+        <div class="subFaction-box" style="background-image: url('@faction.Image')">
+            <h4 class="faction-name">@faction.FactionName</h4>
+            <div class="overlay"></div>
+        </div>
     }
 </div>
 
-<div class="imperial-faction-cards">
+<div class="imperial-faction-cards" style="display: @(selectedMainFaction == FactionType.Imperial ? "block" : "none")">
     @foreach (var faction in factions)
     {
-        if (faction.Type == FactionType.Imperial)
-        {
-            <div class="subFaction-box" style="background-image: url('@faction.Image')">
-                <h4 class="faction-name">@faction.FactionName</h4>
-                <div class="overlay"></div>
-            </div>
-        }
+        <div class="subFaction-box" style="background-image: url('@faction.Image')">
+            <h4 class="faction-name">@faction.FactionName</h4>
+            <div class="overlay"></div>
+        </div>
     }
 </div>
 
-<div class="chaos-faction-cards">
+<div class="chaos-faction-cards" style="display: @(selectedMainFaction == FactionType.Chaos ? "block" : "none")">
     @foreach (var faction in factions)
     {
-        if (faction.Type == FactionType.Chaos)
-        {
-            <div class="subFaction-box" style="background-image: url('@faction.Image')">
-                <h4 class="faction-name">@faction.FactionName</h4>
-                <div class="overlay"></div>
-            </div>
-        }
+        <div class="subFaction-box" style="background-image: url('@faction.Image')">
+            <h4 class="faction-name">@faction.FactionName</h4>
+            <div class="overlay"></div>
+        </div>
     }
 </div>
 
@@ -140,34 +131,42 @@
 };
 
     private List<Faction> factions = new List<Faction>{
-    new Faction("Space Marines", FactionType.Imperial, "Superhuman soldiers of the Imperial.", ""),
-    new Faction("Chaos Space Marines", FactionType.Chaos, "Corrupted and chaotic versions of the Space Marines.", ""),
-    new Faction("Imperial Guard (Astra Militarum)", FactionType.Imperial, "The vast human armies of the Imperial.", ""),
-    new Faction("Adeptus Mechanicus", FactionType.Imperial, "Tech-priests and machines of the Imperial.", ""),
-    new Faction("Adeptus Custodes", FactionType.Imperial, "Emperor's elite bodyguards.", ""),
-    new Faction("Sisters of Battle (Adepta Sororitas)", FactionType.Imperial, "Warrior nuns of the Emperor.", ""),
-    new Faction("Eldar (Craftworlds)", FactionType.Xeno, "Elegant and ancient alien race.", ""),
-    new Faction("Dark Eldar (Drukhari)", FactionType.Xeno, "Sadistic and raiding aliens.", ""),
-    new Faction("Harlequins", FactionType.Xeno, "Eldar performers and warriors.", ""),
-    new Faction("Orks", FactionType.Xeno, "Greenskinned, war-loving brutes.", ""),
-    new Faction("T'au Empire", FactionType.Xeno, "Advanced technology and philosophy aliens.", ""),
-    new Faction("Necrons", FactionType.Xeno, "Ancient, robotic undead.", ""),
-    new Faction("Tyranids", FactionType.Xeno, "Swarm-like, bio-organic aliens.", "")
+    new Faction("Space Marines", FactionType.Imperial, "Superhuman soldiers of the Imperial.", "images/space_marines.jpg"),
+    new Faction("Chaos Space Marines", FactionType.Chaos, "Corrupted and chaotic versions of the Space Marines.", "chaos_space_marines.jpg"),
+    new Faction("Imperial Guard (Astra Militarum)", FactionType.Imperial, "The vast human armies of the Imperial.", "imperial_guard.jpg"),
+    new Faction("Adeptus Mechanicus", FactionType.Imperial, "Tech-priests and machines of the Imperial.", "admech.png"),
+    new Faction("Adeptus Custodes", FactionType.Imperial, "Emperor's elite bodyguards.", "adeptus_custodes.jpeg"),
+    new Faction("Sisters of Battle (Adepta Sororitas)", FactionType.Imperial, "Warrior nuns of the Emperor.", "adepta_sororitas.webp"),
+    new Faction("Eldar (Craftworlds)", FactionType.Xeno, "Elegant and ancient alien race.", "aeldari.jpg"),
+    new Faction("Dark Eldar (Drukhari)", FactionType.Xeno, "Sadistic and raiding aliens.", "drukhari.webp"),
+    new Faction("Harlequins", FactionType.Xeno, "Eldar performers and warriors.", "harlequins.webp"),
+    new Faction("Orks", FactionType.Xeno, "Greenskinned, war-loving brutes.", "orks.webp"),
+    new Faction("T'au Empire", FactionType.Xeno, "Advanced technology and philosophy aliens.", "faction_tau_empire.jpg"),
+    new Faction("Necrons", FactionType.Xeno, "Ancient, robotic undead.", "necrons.jpg"),
+    new Faction("Tyranids", FactionType.Xeno, "Swarm-like, bio-organic aliens.", "tyranids.png")
 };
+
+
+FactionType selectedMainFaction;
+bool mainFactionSelected;
+bool mainFactionShow()
+{
+    mainFactionSelected = false;
+    return mainFactionSelected;
+}
 
 void factionChanger(Faction mainfaction)
 {
     switch (mainfaction.Type)
     {
         case FactionType.Imperial:
-            // Perform actions for Imperial faction
-            // For example, you can navigate to a specific page or show faction details.
+            selectedMainFaction = FactionType.Imperial;
             break;
         case FactionType.Chaos:
-            // Perform actions for Chaos faction
+            selectedMainFaction = FactionType.Chaos;
             break;
         case FactionType.Xeno:
-            // Perform actions for Xenos faction
+            selectedMainFaction = FactionType.Xeno;
             break;
         // Add more cases for other faction types as needed
         default:

@@ -57,16 +57,64 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/adepta_soritas.webp",
+      "PackagePath": "staticwebassets/images/adepta_soritas.webp"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/adeptus_custodes.jpeg",
+      "PackagePath": "staticwebassets/images/adeptus_custodes.jpeg"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/admech.png",
+      "PackagePath": "staticwebassets/images/admech.png"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/aeldari.jpg",
+      "PackagePath": "staticwebassets/images/aeldari.jpg"
+    },
+    {
       "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/chaos-legions.jpg",
       "PackagePath": "staticwebassets/images/chaos-legions.jpg"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/chaos_space_marines.jpg",
+      "PackagePath": "staticwebassets/images/chaos_space_marines.jpg"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/drukhari.webp",
+      "PackagePath": "staticwebassets/images/drukhari.webp"
     },
     {
       "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/faction_tau_empire.jpg",
       "PackagePath": "staticwebassets/images/faction_tau_empire.jpg"
     },
     {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/harlequins.webp",
+      "PackagePath": "staticwebassets/images/harlequins.webp"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/imperial_guard.jpg",
+      "PackagePath": "staticwebassets/images/imperial_guard.jpg"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/necrons.jpg",
+      "PackagePath": "staticwebassets/images/necrons.jpg"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/orks.webp",
+      "PackagePath": "staticwebassets/images/orks.webp"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/space_marines.jpg",
+      "PackagePath": "staticwebassets/images/space_marines.jpg"
+    },
+    {
       "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/the-imperium.jpg",
       "PackagePath": "staticwebassets/images/the-imperium.jpg"
+    },
+    {
+      "Id": "/home/lucas/CodeProjects/WarhammerCampaigns/wwwroot/images/tyranids.png",
+      "PackagePath": "staticwebassets/images/tyranids.png"
     },
     {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.WarhammerCampaigns.Microsoft.AspNetCore.StaticWebAssets.props",

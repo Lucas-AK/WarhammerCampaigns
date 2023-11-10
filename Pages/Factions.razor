@@ -4,6 +4,31 @@
 <PageTitle>Factions</PageTitle>
 
 <style>
+    @@keyframes slideOut {
+        from 
+        {
+            transform: translateY(0rem);
+            opacity: 1;
+        }
+        to 
+        {
+            transform: translateY(53rem);
+            opacity: 0.25;
+        }
+    }
+
+    @@keyframes slideIn{
+        from
+        {
+        transform: translateY(100%);
+        opacity: 0.25;
+        }
+        to
+        {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
     .page-wrapper {
         padding: 1rem;
         height: 100%;
@@ -29,22 +54,58 @@
         color: white;
         cursor: pointer;
         position: relative;
-        transition: transform 500ms;
+        transition: ease-in-out 500ms;        
     }
 
-    .mainFaction-box:hover
+    .mainFaction-box:hover, .h4.faction-name:hover
     {
         transform: translateY(10px);
     }
 
-    .xeno-faction-cards, .imperial-faction-cards, .chaos-faction-cards {
-        display: none; /* Initially hide sub-faction containers */
+    .fly-out-animation
+    {
+        transition: transform 0.5s, opacity 0.5s;
     }
 
+    .fly-out
+    {
+        animation: slideOut 1s;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+    }
+    .slide-out
+    {
+        animation: slideOut 1s;
+        animation-delay: 500ms;
+        animation-timing-function: backwards;
+        animation-timing-function: ease-in;
+
+    }
+
+    .xeno-faction-cards, .imperial-faction-cards, .chaos-faction-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 5fr));
+        height: 85vh;
+        gap: 2rem;
+    }    
+
     .subFaction-box {
-        transform: translateY(100%); /* Start with the sub-faction boxes below the view */
-        transition: transform 500ms, opacity 500ms;
-        opacity: 0; /* Start with opacity 0 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        height: 100%; /* Start with a height of 0 */
+        width: 100%;
+        background-size: cover;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        transition: ease-in-out 500ms;
+        animation: none;
+        visibility: hidden;
     }
 
     .overlay {
@@ -80,14 +141,15 @@
 <div class="faction-cards">
     @foreach (var mainfaction in mainFactions)
     {
-        <a @onclick="() => factionChanger(mainfaction)">
-            <div class="mainFaction-box" style="background-image: url('@mainfaction.Image')">
+        <a>
+            <div @onclick="() => ToggleFlyOut(mainfaction.Type)" class="@($"mainFaction-box {(flyOut? "" : "fly-out")}")" style="background-image: url('@mainfaction.Image')">
                 <h4 class="faction-name">@mainfaction.FactionName</h4>
                 <div class="overlay"></div>
             </div>
         </a>
     }
 </div>
+
 <div class="xeno-faction-cards" style="display: @(selectedMainFaction == FactionType.Xeno ? "block" : "none")">
     @foreach (var faction in factions)
     {
@@ -96,7 +158,7 @@
             <div class="overlay"></div>
         </div>
     }
-</div>
+</div>  
 
 <div class="imperial-faction-cards" style="display: @(selectedMainFaction == FactionType.Imperial ? "block" : "none")">
     @foreach (var faction in factions)
@@ -132,18 +194,18 @@
 
     private List<Faction> factions = new List<Faction>{
     new Faction("Space Marines", FactionType.Imperial, "Superhuman soldiers of the Imperial.", "images/space_marines.jpg"),
-    new Faction("Chaos Space Marines", FactionType.Chaos, "Corrupted and chaotic versions of the Space Marines.", "chaos_space_marines.jpg"),
-    new Faction("Imperial Guard (Astra Militarum)", FactionType.Imperial, "The vast human armies of the Imperial.", "imperial_guard.jpg"),
-    new Faction("Adeptus Mechanicus", FactionType.Imperial, "Tech-priests and machines of the Imperial.", "admech.png"),
-    new Faction("Adeptus Custodes", FactionType.Imperial, "Emperor's elite bodyguards.", "adeptus_custodes.jpeg"),
-    new Faction("Sisters of Battle (Adepta Sororitas)", FactionType.Imperial, "Warrior nuns of the Emperor.", "adepta_sororitas.webp"),
-    new Faction("Eldar (Craftworlds)", FactionType.Xeno, "Elegant and ancient alien race.", "aeldari.jpg"),
-    new Faction("Dark Eldar (Drukhari)", FactionType.Xeno, "Sadistic and raiding aliens.", "drukhari.webp"),
-    new Faction("Harlequins", FactionType.Xeno, "Eldar performers and warriors.", "harlequins.webp"),
-    new Faction("Orks", FactionType.Xeno, "Greenskinned, war-loving brutes.", "orks.webp"),
-    new Faction("T'au Empire", FactionType.Xeno, "Advanced technology and philosophy aliens.", "faction_tau_empire.jpg"),
-    new Faction("Necrons", FactionType.Xeno, "Ancient, robotic undead.", "necrons.jpg"),
-    new Faction("Tyranids", FactionType.Xeno, "Swarm-like, bio-organic aliens.", "tyranids.png")
+    new Faction("Chaos Space Marines", FactionType.Chaos, "Corrupted and chaotic versions of the Space Marines.", "images/chaos_space_marines.jpg"),
+    new Faction("Imperial Guard (Astra Militarum)", FactionType.Imperial, "The vast human armies of the Imperial.", "images/imperial_guard.jpg"),
+    new Faction("Adeptus Mechanicus", FactionType.Imperial, "Tech-priests and machines of the Imperial.", "images/admech.png"),
+    new Faction("Adeptus Custodes", FactionType.Imperial, "Emperor's elite bodyguards.", "images/adeptus_custodes.jpeg"),
+    new Faction("Sisters of Battle (Adepta Sororitas)", FactionType.Imperial, "Warrior nuns of the Emperor.", "images/adepta_soritas.webp"),
+    new Faction("Eldar (Craftworlds)", FactionType.Xeno, "Elegant and ancient alien race.", "images/aeldari.jpg"),
+    new Faction("Dark Eldar (Drukhari)", FactionType.Xeno, "Sadistic and raiding aliens.", "images/drukhari.webp"),
+    new Faction("Harlequins", FactionType.Xeno, "Eldar performers and warriors.", "images/harlequins.webp"),
+    new Faction("Orks", FactionType.Xeno, "Greenskinned, war-loving brutes.", "images/orks.webp"),
+    new Faction("T'au Empire", FactionType.Xeno, "Advanced technology and philosophy aliens.", "images/faction_tau_empire.jpg"),
+    new Faction("Necrons", FactionType.Xeno, "Ancient, robotic undead.", "images/necrons.jpg"),
+    new Faction("Tyranids", FactionType.Xeno, "Swarm-like, bio-organic aliens.", "images/tyranids.png")
 };
 
 
@@ -155,9 +217,16 @@ bool mainFactionShow()
     return mainFactionSelected;
 }
 
-void factionChanger(Faction mainfaction)
+private bool flyOut = true;
+private void ToggleFlyOut(FactionType type)
 {
-    switch (mainfaction.Type)
+    flyOut = !flyOut;
+    factionChanger(type);
+}
+
+void factionChanger(FactionType mainfaction)
+{
+    switch (mainfaction)
     {
         case FactionType.Imperial:
             selectedMainFaction = FactionType.Imperial;
@@ -175,6 +244,4 @@ void factionChanger(Faction mainfaction)
     }
 }
 
-
-    
 }
